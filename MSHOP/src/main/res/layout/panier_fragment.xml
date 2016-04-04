@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+    <ListView
+        android:id="@+id/listCommande"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_weight="0.5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="0.5"
+        android:clickable="false"
+        android:background="@color/colorPrimary"
+        android:paddingTop="5dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Somme :  "
+            android:id="@+id/textView3"
+            android:textIsSelectable="true"
+            android:textSize="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/PanierSomme"
+            android:layout_toStartOf="@+id/PanierSomme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Somme"
+            android:id="@+id/PanierSomme"
+            android:textIsSelectable="true"
+            android:textSize="40dp"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</LinearLayout>

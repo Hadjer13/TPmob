@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/itemBackground"
+    android:clickable="true"
+    android:contextClickable="true"
+    android:longClickable="true"
+    android:onClick="produit_Show_Details">
+
+    <ImageView
+        android:id="@+id/productIcon"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:maxHeight="30dp"
+        android:text="NomProduit"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/itemNameColor"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/productIcon"
+        android:layout_toEndOf="@+id/productIcon" />
+
+    <TextView
+        android:id="@+id/productCategorie"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:maxHeight="30dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/itemAutreInfoColor"
+        android:layout_below="@+id/productName"
+        android:layout_toRightOf="@+id/productIcon"
+        android:layout_toEndOf="@+id/productIcon" />
+
+    <TextView
+        android:id="@+id/productConstructor"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:maxHeight="30dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/itemAutreInfoColor"
+        android:layout_below="@+id/productCategorie"
+        android:layout_toRightOf="@+id/productIcon"
+        android:layout_toEndOf="@+id/productIcon" />
+
+    <TextView
+        android:id="@+id/productPrix"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:maxHeight="30dp"
+        android:text="500 DZ"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/productIcon"
+        android:layout_toRightOf="@+id/productIcon"
+        android:layout_toEndOf="@+id/productIcon" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/productConstructor"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:checked="false"
+        android:clickable="true"
+        android:onClick="product_Is_checked" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/profil"
+        android:layout_toRightOf="@+id/productName"
+        android:layout_toStartOf="@+id/checkBox"
+        android:layout_toLeftOf="@+id/checkBox"
+        android:shadowColor="#050505"
+        android:textColor="@color/colorPrimary" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productId"
+        android:visibility="invisible"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/itemBackground"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/productIcon"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="100dp"
+        android:layout_alignLeft="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:maxHeight="30dp"
+        android:text="NomProduit"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/itemNameColor"
+        android:layout_toRightOf="@+id/productIcon" />
+
+    <TextView
+        android:id="@+id/productPrix"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:maxHeight="30dp"
+        android:text="500 DZ"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/productName"
+        android:layout_toRightOf="@+id/productIcon" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="a"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/productPrix"
+        android:layout_alignStart="@+id/productPrix"
+        android:clickable="true"
+        android:onClick="addQuantite"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_marginLeft="7dp"
+        android:scaleType="center" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="d"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:clickable="true"
+        android:onClick="decrementeProduit"
+        android:src="@android:drawable/button_onoff_indicator_off"
+        android:scaleType="center"
+        android:layout_marginLeft="7dp" />
+
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPicker"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal"
+        android:clickable="false"
+        android:nestedScrollingEnabled="true"
+        android:touchscreenBlocksFocus="true"></NumberPicker>
+
+
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="x"
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:layout_toRightOf="@+id/numberPicker"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="58dp" />
+
+</RelativeLayout>
