@@ -302,6 +302,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_gallery) {
 
+            System.out.print("modiiiiiiifiiiication");
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
