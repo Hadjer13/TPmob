@@ -85,17 +85,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             if(savedInstanceState != null)
             {
                 Panier panier =(Panier) savedInstanceState.getSerializable("Panier");
+                if(fragementTabed ==null){
+                    Toast.makeText(MainActivity.this, "NULLLLL", Toast.LENGTH_SHORT).show();
+                }
                 fragementTabed = new FragementTabed(getSupportFragmentManager(),listProfil , this);
                 fragementTabed.setPanier(panier);
              //   fragementTabed.UpdateListFromPanier(panier);
             }
-            else
-            {
+            else {
                 FragementListProduit.listStaticProduit = new ListProduit();
                 FragementListProduit.ReadProductList(); // Import resource (Liste des Produits )
 
-                fragementTabed = new FragementTabed(getSupportFragmentManager(),listProfil, this);
-
+                fragementTabed = new FragementTabed(getSupportFragmentManager(), listProfil, this);
+            }
                 mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {//*On changement de page (profil)
                     @Override
                     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -116,15 +118,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             fragementTabed.showProductOfCategories(listCategories.get(curentCategorie));
                         }
 
-                        ///////////////////////////////////////Added to Product Item
-                      /*  for (int i=0; i < fragementTabed.getFragmentsByProfil().length;i++) {
-            fragementTabed.getFragmentsByProfil()[i].getListview().setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Toast.makeText(getApplicationContext(), "Helloooo" , Toast.LENGTH_LONG);
-                }
-            });}*/
-
                     }
 
                     @Override
@@ -132,10 +125,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     }
                 });
-
-
-            }
-
 
             // Set up the ViewPager with the sections adapter.
             mViewPager.setAdapter(fragementTabed);
@@ -262,9 +251,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 curentCategorie = position;
 
-
             }
-
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
