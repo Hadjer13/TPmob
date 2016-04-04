@@ -244,7 +244,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         spinner.setAdapter(adapter);
         spinner.setSelection(curentCategorie);
 
-        if (curentCategorie == 0) fragementTabed.showProductOfCategories("");
+        if (curentCategorie == 0) {
+            fragementTabed.showProductOfCategories("");
+
+        }
         else fragementTabed.showProductOfCategories(listCategories.get(curentCategorie));
 
         //chamgement de categorie dans le Spinner
@@ -302,7 +305,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_gallery) {
 
-            System.out.print("modiiiiiiifiiiication");
+            System.out.print("modif");
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -348,10 +351,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if(savedInstanceState != null)
         {
-       /*     int curentPos = savedInstanceState.getInt("curentPos");
+            int curentPos = savedInstanceState.getInt("curentPos");
             int curentCategrorie = savedInstanceState.getInt("curentCategrorie");
             setCurentPos(curentPos);
-            setCurentCategrorie(curentCategrorie);*/
+            setCurentCategrorie(curentCategrorie);
         }
 
 
