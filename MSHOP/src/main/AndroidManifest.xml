@@ -23,12 +23,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityPanier" />
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity android:name=".DetailProduitActivity" />
-        <activity android:name=".ActivityVide"></activity>
+            android:name=".ActivityPanier"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DetailProduitActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ActivityNotif" />
+        <activity
+            android:name=".loginActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".loginActivity" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityMonmshop"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".ActivityPromotion"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".Donnee_personelles_Activity"
+            android:parentActivityName=".ActivityMonmshop" />
+        <activity android:name=".MesCommandesActivity" />
+        <activity
+            android:name=".MesAchatsActivity"
+            android:parentActivityName=".ActivityMonmshop"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+
+        <activity android:name=".ActivityAide"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

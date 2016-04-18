@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.io.Serializable;
 
+import dz.esi.commerce.mshop.MainActivity;
 import dz.esi.commerce.mshop.R;
 import dz.esi.commerce.mshop.metier_commerce.*;
 
@@ -23,6 +24,7 @@ public class CutomAdapter extends BaseAdapter implements Filterable,Serializable
     //      Pour le fitre
     private ValueFilter valueFilter;
     private ListProduit mFilterList;
+
 
     public CutomAdapter(Context context, ListProduit list) {
         this.context = context;

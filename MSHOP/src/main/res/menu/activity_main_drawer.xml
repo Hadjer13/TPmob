@@ -2,35 +2,42 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_acceuil"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Acceuil" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_monmshop"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Mon Mshop" />
+
         <item
-            android:id="@+id/nav_manage"
+
+            android:id="@+id/nav_promotion"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Promotions" />
+        <item
+
+            android:id="@+id/nav_aide"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Aide" />
+
+
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+    <group
+        android:id="@+id/second"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Se connecter" />
+        <item xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_notif"
+            android:title="Notifications"
+            app:actionLayout="@layout/menu_switch"
+            app:showAsAction="always" />
 
+    </group>
 </menu>

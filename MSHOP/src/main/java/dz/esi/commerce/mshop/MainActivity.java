@@ -3,8 +3,8 @@ package dz.esi.commerce.mshop;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.SwitchCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.ImageView;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,7 +25,6 @@ import android.widget.Toast;
 
 import java.util.LinkedList;
 
-import Librerie.PagerTransformation.CubeInTransformer;
 import dz.esi.commerce.mshop.fragements.FragementListProduit;
 import dz.esi.commerce.mshop.fragements.FragementTabed;
 import dz.esi.commerce.mshop.metier_commerce.ListProduit;
@@ -298,21 +297,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_promotion) {
 
-            Intent intent = new Intent( getApplicationContext() , ActivityVide.class);
+            Intent intent = new Intent( getApplicationContext() , ActivityPromotion.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_aide) {
+            Intent intent = new Intent( getApplicationContext() , ActivityAide.class);
+            startActivity(intent);
 
             System.out.print("modif");
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_acceuil) {
+            Intent intent = new Intent( getApplicationContext() , MainActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_monmshop) {
+            Intent intent = new Intent( getApplicationContext() , ActivityMonmshop.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_connect) {
+            Intent intent = new Intent( getApplicationContext() , loginActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_notif) {
+
+
 
         }
 

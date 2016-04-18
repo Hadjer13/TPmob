@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="information">
+        <item>Données Personelles</item>
+        <item>Mes commandes</item>
+        <item>Mes achats</item>
+        <item>Déconnexion</item>
+    </string-array>
+</resources>

@@ -31,6 +31,12 @@ public class Produit implements Serializable, Comparable<Produit>{
         this.nomProduit = nomProduit;
         this.prix = prix;
     }
+    public Produit(String nomProduit,String description, int iconDrawable) {
+        this.nomProduit = nomProduit;
+        Description = description;
+        this.iconDrawable = iconDrawable;
+    }
+
 
     public Produit(int id, String nomProduit, float prix, String constrecteur, String dateFabrication, String description, String categorie,String profil,int iconDrawable, int[] imagesDrawable) {
         this.nomProduit = nomProduit;
